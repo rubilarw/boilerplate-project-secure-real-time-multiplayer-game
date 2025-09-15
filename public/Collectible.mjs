@@ -1,8 +1,11 @@
 class Collectible {
-  constructor({x, y, value, id}) {
-
+  constructor({ x, y, value, id }) {
+    this.x = x || 0;
+    this.y = y || 0;
+    this.value = value || 1;
+    this.id = id;
+    this.size = 20; // Tamaño estándar para colisión
   }
-
 }
 
 /*
@@ -11,6 +14,7 @@ class Collectible {
 */
 try {
   module.exports = Collectible;
-} catch(e) {}
+} catch (e) {}
 
-export default Collectible;
+module.exports = Collectible;
+
